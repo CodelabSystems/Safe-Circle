@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+
+    <application
+      android:name=".MainApplication"
+      android:theme="@style/AppTheme"
+      android:supportsRtl="true">
+
+       <!-- You will only need to add this meta-data tag, but make sure it's a child of application -->
+   <meta-data
+     android:value=" "/> <!-- Your key goes here. -->
+      <activity
+        android:exported="true">
+      </activity>
+</manifest>
