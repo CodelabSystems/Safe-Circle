@@ -4,18 +4,12 @@ import BottomSheet, {BottomSheetBackdrop} from '@gorhom/bottom-sheet';
 import {Text, useTheme, Portal, Divider} from 'react-native-paper';
 import SemiBoldText from '../customText/SemiBoldText';
 import RegularText from '../customText/RegularText';
-import {Iconify} from 'react-native-iconify';
-import BoldText from '../customText/BoldText';
-import moment from 'moment';
 import {useNavigation} from '@react-navigation/native';
 import {showToast} from '../../utils/Toast';
-import firestore, {doc} from '@react-native-firebase/firestore';
-import {useAuthContext} from '../context/GlobaContext';
+import {useAuthContext} from '../../context/GlobaContext';
 
 const UserSheet = ({bottomSheetRef, userData}) => {
-  const {userDetail} = useAuthContext();
 
-  const snapPoints = userData?.diagnosis ? ['50%', '60%'] : ['30%', '40%'];
   let theme = useTheme();
   let navigation = useNavigation();
   const renderBackdrop = useCallback(
